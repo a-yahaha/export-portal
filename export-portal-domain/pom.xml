@@ -19,4 +19,11 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
+    <dependencies>
+        <dependency>
+            <groupId>com.aya.cloud.export</groupId>
+            <artifactId>export-portal-common</artifactId>
+        </dependency>
+    </dependencies>
+
 </project>

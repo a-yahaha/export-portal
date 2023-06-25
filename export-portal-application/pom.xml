@@ -30,6 +30,11 @@
             <artifactId>export-portal-adapter</artifactId>
         </dependency>
 
+        <dependency>
+            <groupId>com.aya.cloud.export</groupId>
+            <artifactId>export-api</artifactId>
+        </dependency>
+
     </dependencies>
 
 </project>

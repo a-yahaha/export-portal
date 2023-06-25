@@ -24,6 +24,7 @@
             <groupId>com.aya.cloud.export</groupId>
             <artifactId>export-portal-application</artifactId>
         </dependency>
+
     </dependencies>
 
 </project>
