@@ -2,6 +2,9 @@ package com.aya.cloud.export.common.enums;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
+import org.apache.commons.lang3.StringUtils;
+
+import java.util.Arrays;
 
 /**
  * @author yajun
@@ -14,23 +17,30 @@ import lombok.Getter;
 @Getter
 public enum FileCloudStoreEnum {
 
-    TECENT(1, "腾讯云"),
+    TECENT("TECENT", "腾讯云"),
 
-    QINIU(2, "七牛云"),
+    QINIU("QINIU", "七牛云"),
 
-    ALi(3, "阿里云"),
+    ALi("ALi", "阿里云"),
 
-    CUSTOMIZE(4, "自定义云存储")
+    CUSTOMIZE("CUSTOMIZE", "自定义云存储")
 
     ;
 
     /**
      * 类型
      */
-    private int type;
+    private String type;
 
     /**
      * 文件秒速
      */
     private String desc;
+
+    public static FileCloudStoreEnum of(String name) {
+        return Arrays.stream(values())
+                .filter(each -> StringUtils.equals(name, each.type))
+                .findFirst()
+                .orElse(null);
+    }
 }

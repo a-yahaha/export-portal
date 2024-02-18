@@ -3,6 +3,9 @@ package com.aya.cloud.export.common.enums;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 
+import java.util.Arrays;
+import java.util.Objects;
+
 /**
  * @author yajun
  * @version 1.0.0
@@ -29,4 +32,11 @@ public enum CSVDelimiterEnum {
     private String delimiter;
 
     private String desc;
+
+    public static CSVDelimiterEnum of(Integer code) {
+        return Arrays.stream(values())
+                .filter(each -> Objects.equals(code, each.code))
+                .findFirst()
+                .orElse(null);
+    }
 }

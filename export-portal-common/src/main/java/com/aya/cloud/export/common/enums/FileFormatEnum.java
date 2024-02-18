@@ -16,15 +16,15 @@ import lombok.Getter;
 @Getter
 public enum FileFormatEnum {
 
-    CSV(1, "csv"),
+    CSV("CSV", "csv"),
 
-    EXCEL(2, "excel"),
+    EXCEL("EXCEL", "excel"),
 
-    TXT(3, "txt"),
+    TXT("TXT", "txt"),
 
     ;
 
-    private int code;
+    private String name;
 
     private String desc;
 }

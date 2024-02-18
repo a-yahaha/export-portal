@@ -1,7 +1,5 @@
 package com.aya.cloud.export.domain.config.model;
 
-import lombok.Data;
-
 /**
  * @author yajun
  * @version 1.0.0
@@ -27,10 +25,9 @@ public class ExportConfig {
      */
     private String version;
 
-    // 业务的配置
 
     /**
-     * 文件某块配置
+     * 文件模块配置
      */
-    private FileModuleConfig fileModule;
+    private FileRule fileRule;
 }

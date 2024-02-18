@@ -1,4 +1,4 @@
-package com.aya.cloud.export.application.export.service;
+package com.aya.cloud.export.application.job.service;
 
 import com.aya.cloud.export.api.job.model.request.ExportJobRequest;
 import lombok.extern.slf4j.Slf4j;

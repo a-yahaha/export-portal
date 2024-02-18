@@ -10,7 +10,7 @@ import lombok.Data;
  * @date created in 10:26 2023/6/18
  */
 @Data
-public class FileModuleConfig {
+public class FileModuleRule {
 
     /**
      * 导出的文件类型
@@ -35,9 +35,9 @@ public class FileModuleConfig {
     private Integer excelFileType;
 
     /**
-     * 文件模版id
+     * 文件模版
      */
-    private Long templateId;
+    private String fileTemplate;
 
     /**
      * 云文件存储类型
@@ -56,7 +56,6 @@ public class FileModuleConfig {
      * 单位：分钟
      */
     private Long expireMinute;
-
 
 
 }

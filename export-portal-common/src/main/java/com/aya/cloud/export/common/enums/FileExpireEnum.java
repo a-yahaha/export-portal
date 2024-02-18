@@ -2,6 +2,10 @@ package com.aya.cloud.export.common.enums;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
+import org.apache.commons.lang3.StringUtils;
+
+import java.util.Arrays;
+import java.util.Objects;
 
 /**
  * @author yajun
@@ -14,9 +18,9 @@ import lombok.Getter;
 @Getter
 public enum FileExpireEnum {
 
-    PERMANENT(1, "永久有效"),
+    PERMANENT(1, "PERMANENT", "永久有效"),
 
-    LIMITED_TIME(2, "限时有效"),
+    LIMITED_TIME(2,"LIMITED_TIME", "限时有效"),
 
 
     ;
@@ -24,4 +28,17 @@ public enum FileExpireEnum {
     private int code;
 
     private String name;
+
+    private String desc;
+
+    public boolean isPermanent() {
+        return Objects.equals(code, PERMANENT.code);
+    }
+
+    public static FileExpireEnum of(String name) {
+        return Arrays.stream(values())
+                .filter(each -> StringUtils.equals(name, each.name))
+                .findFirst()
+                .orElse(null);
+    }
 }

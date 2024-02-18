@@ -1,5 +1,9 @@
 package com.aya.cloud.export.common.enums;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+
 /**
  * @author yajun
  * @version 1.0.0
@@ -7,11 +11,12 @@ package com.aya.cloud.export.common.enums;
  * @description 任务状态描述
  * @date created in 22:09 2023/6/16
  */
-@Al
+@AllArgsConstructor
+@NoArgsConstructor
+@Getter
 public enum JobStatusEnum {
 
     INIT(1, "init", "初始化"),
-
 
 
     ;

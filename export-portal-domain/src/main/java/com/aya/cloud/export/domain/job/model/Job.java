@@ -22,6 +22,8 @@ public interface Job {
      */
     BizIdentity getBizIndentity();
 
+    JobContex
+
 
 
 

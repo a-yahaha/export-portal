@@ -21,12 +21,12 @@ public class Operator implements Serializable {
     /**
      * 操作人的id
      */
-    private Long operatorId;
+    private Long id;
 
     /**
      * 操作人的名称
      */
-    private String nickName;
+    private String name;
 
     /**
      * 操作人的身份类型
